@@ -1,0 +1,23 @@
+/* Cart.css */
+
+.container {
+    margin-top: 50px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    width: 18rem;
+  }
+  
+  .card-img-top {
+    background-color: #f8f9fa;
+  }
+
+  #bttn{
+    background-color:#0d6efd;
+  }
+
+  .cart-centre{
+    text-align: center;
+  }
+  

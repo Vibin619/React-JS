@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.center {
+  display: block;
+  width: 5%;
+  margin-left: auto;
+}
+
+a{
+  color: aliceblue;
+}
+
+nav{
+  background-color: #477dc0;
+}
+
+.bdy{
+  background-color: #e2ec56d8;
+}
+
+#cont{
+  background-color: #bebfc1;
+}
+
+#steam{
+  display: inline-block !important;
+  font-size: xx-large;
+  text-align: center;
+  border: 5px solid #214a7b;
+  border-radius: 80%;
+  padding: 10px;
+  margin-left: 45%;
+  }
+
+  
+  #multi-color{
+    font-size: 48px;
+      font-weight: bold;
+      background: linear-gradient(to right, rgb(6, 65, 132),#4e81a8,#9fb5e1 );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+  }
+
+  .goku{
+    background: linear-gradient(to left, rgb(90, 101, 155),#214a7b,#2a475e );
+  }
+
+  
+
+
+
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(255, 255, 255);
+}
+
+.App-link {
+  color: #ce1515;
+}
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
