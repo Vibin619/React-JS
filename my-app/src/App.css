@@ -93,3 +93,29 @@ nav{
     transform: rotate(360deg);
   }
 }
+
+
+.card-container {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+
+.add-button:hover,
+.play-button:hover {
+  filter: brightness(120%);
+  transition: filter 0.3s ease;
+}
+
+
+.add-button:active,
+.play-button:active {
+  transform: translateY(1px); 
+  transition: transform 0.2s ease;
+}
+
+

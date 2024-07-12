@@ -14,10 +14,30 @@
   }
 
   #bttn{
-    background-color:#0d6efd;
+    background-color:#214a7b;
+    color: #ffffff;
+  }
+
+  .white{
+    color: #ffffff;
   }
 
   .cart-centre{
     text-align: center;
   }
+
+  .total-price {
+     
+    padding: 8px; 
+    display: inline-block;
+    margin-top: 15px; 
+    margin-bottom: 10px;
+    border-radius: 4px; 
+    background-color: #214a7b; 
+    font-size: 1.25rem;
+    font-weight: bold; 
+    color: #ffffff; 
+  }
+  
+  
   
