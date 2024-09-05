@@ -32,7 +32,7 @@ nav{
 }
 
 #cont{
-  background-color: #bebfc1;
+  background: linear-gradient(to left, rgb(132, 133, 142),#a7adb4,#f7f6f6 );
 }
 
 #steam{
@@ -117,5 +117,22 @@ nav{
   transform: translateY(1px); 
   transition: transform 0.2s ease;
 }
+
+
+.add-button {
+  background-color: #214a7b;
+  color: white;
+  border: none;
+  outline: none; 
+}
+
+.add-button:hover {
+  background-color: #173a61;
+}
+
+.add-button:focus {
+  outline: none;
+}
+
 
 

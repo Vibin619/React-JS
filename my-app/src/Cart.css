@@ -38,6 +38,24 @@
     font-weight: bold; 
     color: #ffffff; 
   }
+
+  #buyButton {
+    margin-left: auto;
+    background-color: #214a7b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #buyButton:hover {
+    background-color: #173a61;
+  }
+  
+  #buyButton:focus {
+    outline: none;
+  }
+  
   
   
   

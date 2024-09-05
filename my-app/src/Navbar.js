@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './Navbar.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 
-const Navbar = () => {
+const Navbar = ({ username, onLogout }) => {
   const games = [
     { name: "Valorant", path: "/valorant" },
     { name: "Most Wanted", path: "/most-wanted" },
@@ -56,8 +56,16 @@ const Navbar = () => {
               </Dropdown>
             </li>
           </ul>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/2048px-Steam_icon_logo.svg.png" alt="Steam" className="center" />
         </div>
+        <Dropdown>
+          <Dropdown.Toggle variant="transparent" id="profileDropdown" style={{ border: 'none', background: 'transparent', padding: 0 }}>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/2048px-Steam_icon_logo.svg.png" alt="Steam" className="center" style={{ width: '40px', height: '40px' }} />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.ItemText>{username}</Dropdown.ItemText>
+            <Dropdown.Item onClick={onLogout}>Logout</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </div>
     </nav>
   );

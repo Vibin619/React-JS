@@ -13,6 +13,7 @@ import TombRaider from './TombRaider';
 import HotPursuit from './HotPursuit';
 import ResidentEvil4 from './ResidentEvil4';
 import JujutsuKaisen from './JujutsuKaisen';
+import Login from './Login'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -76,7 +77,7 @@ const Home = ({ addToCart }) => {
                   <p className="card-text">₹{game.product_price}</p>
                   <button 
                     onClick={(e) => { e.stopPropagation(); handleAddToCart(game); }} 
-                    className="btn btn-primary add-button" // Apply the add-button class
+                    className="btn btn-primary add-button" 
                     style={{ backgroundColor: '#214a7b' }}
                   >
                     Add
@@ -94,6 +95,8 @@ const Home = ({ addToCart }) => {
 
 const App = () => {
   const [cart, setCart] = useState([]);
+  const [username, setUsername] = useState('');
+  const navigate = useNavigate();
 
   const addToCart = async (game) => {
     try {
@@ -172,21 +175,32 @@ const App = () => {
     fetchCart();
   }, []);
 
+  const handleLogin = (username) => {
+    setUsername(username);
+    navigate('/');
+  };
+
+  const handleLogout = () => {
+    setUsername('');
+    navigate('/login');
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar username={username} onLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Home addToCart={addToCart} />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/community" element={<Community />} />
         <Route path="/game/:id" element={<GameDetail />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
-        <Route path="/valorant" element={<Valorant />} /> {/* Add routes for your new game pages */}
+        <Route path="/valorant" element={<Valorant />} /> 
         <Route path="/most-wanted" element={<MostWanted />} />
         <Route path="/tomb-raider" element={<TombRaider />} />
         <Route path="/hot-pursuit" element={<HotPursuit />} />
         <Route path="/resident-evil-4" element={<ResidentEvil4 />} />
         <Route path="/jujutsu-kaisen" element={<JujutsuKaisen />} />
+        <Route path="/login" element={<Login onLogin={handleLogin} />} /> {/* Add the login route */}
       </Routes>
     </>
   );
